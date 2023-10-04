@@ -40,6 +40,11 @@ app.get('/homer-simpson', (req, res) => {
 	res.send(`D'Oh`);
 });
 
+// 7.
+app.get('/gollum', (req, res) => {
+	res.send(`My precious`);
+});
+
 // Listen
 app.listen(PORT, () => {
 	console.log(`Listening for requests on port ${PORT}`);

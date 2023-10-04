@@ -35,6 +35,11 @@ app.get('/jj-evans', (req, res) => {
 	res.send(`Dy-no-myte!`);
 });
 
+// 6.
+app.get('/homer-simpson', (req, res) => {
+	res.send(`D'Oh`);
+});
+
 // Listen
 app.listen(PORT, () => {
 	console.log(`Listening for requests on port ${PORT}`);

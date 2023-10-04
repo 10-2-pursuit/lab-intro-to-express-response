@@ -22,6 +22,10 @@ app.get('/bruce-banner', (req, res) => {
 	res.send(`Don't make me angry`);
 });
 
+app.get('/emeril', (req, res) => {
+	res.send(`Bam!`);
+});
+
 // Listen
 app.listen(PORT, () => {
 	console.log(`Listening for requests on port ${PORT}`);

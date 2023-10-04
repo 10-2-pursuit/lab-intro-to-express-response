@@ -57,7 +57,9 @@ app.get('terminator', (req, res) => {
 
   app.get('/magic8ball', (req, res) => {
     const randomResponse = magic8BallResponses[Math.floor(Math.random() * magic8BallResponses.length)]; 
-    res.send(randomResponse);
+    const htmlResponse = `<html><head><title>Magic 8-Ball Response</title></head><body><h1>${randomResponse}</h1></body></html>`;
+
+    res.send(htmlResponse);
   });
 
 const port = process.env.PORT || 3000; 

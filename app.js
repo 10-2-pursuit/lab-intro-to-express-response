@@ -18,6 +18,10 @@ app.get('/borg', (req, res) => {
 	res.send(`Resistance is futile`);
 });
 
+app.get('/bruce-banner', (req, res) => {
+	res.send(`Don't make me angry`);
+});
+
 // Listen
 app.listen(PORT, () => {
 	console.log(`Listening for requests on port ${PORT}`);

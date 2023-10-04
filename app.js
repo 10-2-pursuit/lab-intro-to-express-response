@@ -50,6 +50,11 @@ app.get('/rocky', (req, res) => {
 	res.send(`Yo, Adrian`);
 });
 
+// 9.
+app.get('/zeus', (req, res) => {
+	res.send(`Release the Kraken`);
+});
+
 // Listen
 app.listen(PORT, () => {
 	console.log(`Listening for requests on port ${PORT}`);

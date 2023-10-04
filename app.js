@@ -29,15 +29,50 @@ app.get("/", (request, response) => {
 
 app.get("/terminator", (request, response) => {
 	response.send("I\'ll be back");
-	response.send("Hasta la vista, baby")
 });
 
 app.get("/terminator2", (request, response) => {
 	response.send("Hasta la vista, baby");
+}); 
+
+app.get("/steve-rogers", (request, response) => {
+	response.send("I can do this all day!");
+});
+
+app.get("/homer-simpson", (request, response) => {
+	response.send("D\'Oh");
+});
+
+app.get("/bruce-banner", (request, response) => {
+	response.send("Don\'t make me angry");
+});
+
+app.get("/batman", (request, response) => {
+	response.send("To the Batmobile!");
+});
+
+app.get("/fraiser", (request, response) => {
+	response.send("I\'m listening");
+});
+
+app.get("/regis", (request, response) => {
+	response.send("Is that your final answer?");
+});
+
+app.get("/fox-mulder", (request, response) => {
+	response.send("The truth is out there");
+});
+
+app.get("/zues", (request, response) => {
+	response.send("Release the Kraken");
+});
+
+app.get("/tony-montana", (request, response) => {
+	response.send("Say hello to my little friend");
 });
 
 app.get("/magic8", (request, response) => {
-	const randomIndex = Math.floor(Math.random()) * magic8Responses.length;
+	const randomIndex = Math.floor(Math.random() * magic8Responses.length);
 	const randomResponse = magic8Responses[randomIndex];
 	response.send(`${randomResponse}`)
 });

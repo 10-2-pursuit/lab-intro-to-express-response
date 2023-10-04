@@ -45,6 +45,11 @@ app.get('/gollum', (req, res) => {
 	res.send(`My precious`);
 });
 
+// 8.
+app.get('/rocky', (req, res) => {
+	res.send(`Yo, Adrian`);
+});
+
 // Listen
 app.listen(PORT, () => {
 	console.log(`Listening for requests on port ${PORT}`);

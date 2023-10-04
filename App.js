@@ -98,8 +98,8 @@ const magic8Responses = [
     res.send(`<h1>${randomResponse}</h1>`);
   });
   
-  app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });
-  
+  app.get('/', (request, response) => {
+    response.status(418).send('Hello, world!')
+})
+
   module.exports = app;

@@ -60,6 +60,11 @@ app.get('/dorothy', (req, res) => {
 	res.send(`Toto, I've got a feeling we're not in Kansas anymore`);
 });
 
+// 11.
+app.get('/terminator2', (req, res) => {
+	res.send(`Hasta la vista, baby`);
+});
+
 // Listen
 app.listen(PORT, () => {
 	console.log(`Listening for requests on port ${PORT}`);

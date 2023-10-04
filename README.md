@@ -76,10 +76,13 @@ Test by going to http://localhost:3003/tim-gunn
 
 **Thought questions**
 - What characters are allowed in a URL?
+A - Z , a - z, 0 - 9, $-_.+! *'()
 - What happens if you try to create a URL `/tim gunn`
+it will automatically replace a space to %20
 - Is there a difference between `/timgunn` and `/TimGunn` and `/tim/gunn`?
+yes, first two will give same result, but last one will give an error. 
 - If you have a phrase like `Here's looking at you, kid`, how do you deal with the `'` in `Here's`?
-
+put backslash
 <hr />
 
 **Choose Some Catchphrases to build routes**
@@ -128,11 +131,26 @@ app.get('terminator', (req, res) => {
 
 What do you see in your browser?
  - Both messages?
+ no, res.send() will terminate responde (it includes res.end())
  - One message (which one)
+ first one
  - An error?
+not on the client side, will be an error message on the server side.
 
 Check terminal:
-
+```
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:399:5)
+    at ServerResponse.setHeader (node:_http_outgoing:649:11)
+    at ServerResponse.header (/Users/sy/Desktop/labs/lab-intro-to-express-response/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.contentType (/Users/sy/Desktop/labs/lab-intro-to-express-response/node_modules/express/lib/response.js:624:15)
+    at ServerResponse.send (/Users/sy/Desktop/labs/lab-intro-to-express-response/node_modules/express/lib/response.js:149:14)
+    at /Users/sy/Desktop/labs/lab-intro-to-express-response/app.js:32:9
+    at Layer.handle [as handle_request] (/Users/sy/Desktop/labs/lab-intro-to-express-response/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sy/Desktop/labs/lab-intro-to-express-response/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/sy/Desktop/labs/lab-intro-to-express-response/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/sy/Desktop/labs/lab-intro-to-express-response/node_modules/express/lib/router/layer.js:95:5)
+```
 
 <details><summary>Possible Error Message</summary>
 

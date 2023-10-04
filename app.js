@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
 	res.send('Intro to Express Response Lab 🖖');
 });
 
+app.get('/terminator', (req, res) => {
+	res.send(`I'll be back`);
+});
+
 const magic8Responses = [
 	'It is certain',
 	'It is decidedly so',

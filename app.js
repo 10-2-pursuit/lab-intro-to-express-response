@@ -1,3 +1,8 @@
+const express = require("express");
+
+const app = express();
+const PORT = 3333
+
 
 const magic8Responses = [
     "It is certain",
@@ -36,7 +41,7 @@ const magic8Responses = [
     response.send(randomResponse)
   }); 
 
-  app.listen(3003, () => {
-    console.log("Listening for requests on port 3333")
+  app.listen(PORT, () => {
+    console.log(`Listening for requests on port ${PORT}`)
   });
 

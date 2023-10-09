@@ -41,6 +41,10 @@ const magic8Responses = [
     response.send(randomResponse)
   }); 
 
+  app.get("/emeril", (req, res) => {
+    res.send("Bam!");
+  });
+
   app.listen(PORT, () => {
     console.log(`Listening for requests on port ${PORT}`)
   });

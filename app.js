@@ -37,6 +37,6 @@ const magic8Responses = [
   }); 
 
   app.listen(3003, () => {
-    console.log("Listening for requests on port 3003")
+    console.log("Listening for requests on port 3333")
   });
 

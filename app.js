@@ -44,7 +44,40 @@ const magic8Responses = [
   app.get("/emeril", (req, res) => {
     res.send("Bam!");
   });
-
+  app.get("/stevemcgarrett", (req, res) => {
+    res.send("Book 'em Danno!");
+  });
+  app.get("/coachtaylor", (req, res) => {
+    res.send("Clear eyes, full hearts, can't Lose");
+  });
+  app.get("/homersimpson", (req, res) => {
+    res.send("D'Oh");
+  });
+  app.get("/brucebanner", (req, res) => {
+    res.send("Don't make me angry");
+  });
+  app.get("/jjevans", (req, res) => {
+    res.send("Dy-no-myte!");
+  });
+  app.get("/batman", (req, res) => {
+    res.send("To the Batmobile!");
+  });
+  app.get("/hannibalsmith", (req, res) => {
+    res.send("I love it when a plan comes together");
+  });
+  app.get("/frasier", (req, res) => {
+    res.send("I'm listening");
+  });
+  app.get("/regis", (req, res) => {
+    res.send("Is that your final answer?");
+  });
+  app.get("/borg", (req, res) => {
+    res.send("Resistance is futile");
+  });
+  app.get("/foxmulder", (req, res) => {
+    res.send("The truth is out there ");
+  });
+  
   app.listen(PORT, () => {
     console.log(`Listening for requests on port ${PORT}`)
   });

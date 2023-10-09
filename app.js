@@ -94,3 +94,6 @@ const magic8Responses = [
     console.log(`Listening for requests on port ${PORT}`)
   });
 
+
+  module.exports = app;
+

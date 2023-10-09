@@ -127,9 +127,10 @@ app.get('terminator', (req, res) => {
 ```
 
 What do you see in your browser?
- - Both messages?
+ - Both messages? No 
  - One message (which one)
- - An error?
+ Hasta la vista, baby 
+ - An error? YES - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
 
 Check terminal:
 

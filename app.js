@@ -36,9 +36,10 @@ const magic8Responses = [
   });
 
   app.get("/magic8", (request, response) => {
-    const randomIndex = Math.floor(Math.random()) * magic8Responses()
-    const randomResponse = magic8Responses[randomIndex]
-    response.send("randomResponse ${randomResponse}");
+  
+    const randomIndex = Math.floor(Math.random() * magic8Responses.length);
+    const randomResponse = magic8Responses[randomIndex];
+    response.send(`<h1>${randomResponse}</h1>`);
   }); 
 
   app.get("/emeril", (req, res) => {
@@ -76,6 +77,13 @@ const magic8Responses = [
   });
   app.get("/foxmulder", (req, res) => {
     res.send("The truth is out there ");
+  });
+  app.get("/terminator", (req, res) => {
+    res.send("Hasta la vista, baby");
+    // res.send("I\ll be back");
+  });
+  app.get("/terminator2", (req, res) => {
+    res.send("I\ll be back");
   });
   
   app.listen(PORT, () => {

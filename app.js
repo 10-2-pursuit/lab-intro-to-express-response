@@ -26,10 +26,13 @@ const magic8Responses = [
     "Very doubtful"
   
   ]
+  app.get('/', (request, response) => {
+    response.status(200).send('Hello, world!')
+})
 
-  app.get("/", (request, response) => {
-    response.send("I love Express!");
-  });
+  // app.get("/", (request, response) => {
+  //   response.send("I love Express!");
+  // });
 
   app.get("/universe", (request, response) => {
     response.send("Hello Universe!");

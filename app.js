@@ -38,7 +38,7 @@ const magic8Responses = [
   app.get("/magic8", (request, response) => {
     const randomIndex = Math.floor(Math.random()) * magic8Responses()
     const randomResponse = magic8Responses[randomIndex]
-    response.send(randomResponse)
+    response.send("randomResponse ${randomResponse}");
   }); 
 
   app.get("/emeril", (req, res) => {

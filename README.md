@@ -76,9 +76,30 @@ Test by going to http://localhost:3003/tim-gunn
 
 **Thought questions**
 - What characters are allowed in a URL?
+      Alphanumeric Characters: Letters (a-z, A-Z) and numbers (0-9) are allowed in URLs.
+      Some characters have special meanings in URLs and must be used for their reserved purposes. These characters include:
+        Colon (:) - Used to separate the protocol
+        Forward Slash (/) - Used to separate different parts of the URL
+        Question Mark (?) - Used to introduce query parameters.
+        Ampersand (&) - Used to separate multiple query parameters.
+        Equals Sign (=) - Used to assign values to query parameters.
+        Hash (#) - Used to specify fragments within a URL
+      These characters, though not reserved, are safe to use in URLs without encoding.
+        Alphanumeric characters (letters and numbers)
+        Hyphen (-)
+        Underscore (_)
+        Period (.)
+        Tilde (~)
+      If you need to include characters that are not allowed or have special meanings in URLs, you can use percent-encoding to represent them as hexadecimal values preceded by a percent sign (%).
+
+
 - What happens if you try to create a URL `/tim gunn`
+      The space would be wrapped in the % in an attempt to encode it.
 - Is there a difference between `/timgunn` and `/TimGunn` and `/tim/gunn`?
+      There is no difference in the first two but the third would represent an embedded address where gunn would be an option within the endpoint tim.
 - If you have a phrase like `Here's looking at you, kid`, how do you deal with the `'` in `Here's`?
+      So as not to confuse the apostrophe (') with a singular quotation pair (' ') a backward slash (\) would be used to represent this apostrophe within quotes.
+
 
 <hr />
 
@@ -130,6 +151,8 @@ What do you see in your browser?
  - Both messages?
  - One message (which one)
  - An error?
+   
+   Only the first message is displayed in the console/browser.
 
 Check terminal:
 
@@ -141,6 +164,8 @@ Check terminal:
 </details>
 
 What does this error message mean?
+
+  There was an error message which occured after the first message was displayed. It asn error highlighting the fact that there can only be one response to each request. Here we are  requesting two such responses from the one request represented as the one route /Terminator.
 
 <details><summary>Hint/Reminder</summary>
 
@@ -156,6 +181,8 @@ We can look through the `call stack` of the error messages. This is the order of
 
 I can resolve this, by combining the res.send, into one string. Or I could possibly create a new route `/terminator2` or an even different solution- it would depend on what my goal is for the user/application.
 
+
+I have attempted another solution that would involve making each person and their catch phrase their own object. the app will then accept one name and respond with the respective catchphrase. In the case where the are multiple catchphrases the coding will concatenate the catchphrases and (in theory) separate them by placing them on separate lines and then deliver them to the app as a single response thus keeping the 1:1 rule intact.
 
 
 </details>
@@ -212,6 +239,7 @@ Make your response appear as an `<h1>` tag.
 
 </details>
 
+### SEE APP.JS
 
 
 ## Bonus

@@ -74,7 +74,11 @@ app.get("/borg", (req, res) => {
 });
 
 app.get("/magic8", (req, res) => {
-  res.send(magic8Responses[Math.floor(Math.random() * magic8Responses.length)]);
+  res.send(
+    `<h1>${
+      magic8Responses[Math.floor(Math.random() * magic8Responses.length)]
+    }</h1>`
+  );
 });
 
 app.listen(PORT, () => {
